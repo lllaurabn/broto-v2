@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Broto — Pediatria contemporânea</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- TRILHO LATERAL FIXO — navegação por "páginas" do livro de descobertas -->
+  <aside class="rail" id="rail">
+    <a href="#page-01" class="rail-logo"><span class="dot"></span>Broto</a>
+
+    <nav class="rail-nav" id="railNav" aria-label="Navegação por seções">
+      <!-- itens injetados via JS a partir de PAGE_DATA -->
+    </nav>
+
+    <div class="rail-shapes" aria-hidden="true">
+      <div class="rail-orbit"><span></span></div>
+      <div class="rail-ring"></div>
+    </div>
+
+    <a href="#page-10" class="btn btn-primary rail-cta">
+      Agendar consulta
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+        <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
+  </aside>
+
+  <!-- BARRA SUPERIOR MOBILE (o trilho vira isso em telas pequenas) -->
+  <header class="mobile-bar" id="mobileBar">
+    <a href="#page-01" class="rail-logo"><span class="dot"></span>Broto</a>
+    <div class="mobile-page-indicator"><span id="mobilePageNum">01</span><i>/10</i></div>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </header>
+  <div class="mobile-menu" id="mobileMenu"></div>
+
+  <!-- COLUNA DE CONTEÚDO -->
+  <main class="content" id="content">
+
+    <!-- 01 · HERO -->
+    <section class="page hero-page" id="page-01" data-page="01" data-label="Início">
+      <div class="page-inner hero-grid">
+
+        <div class="hero-visual">
+          <div class="porthole">
+            <svg class="trail" viewBox="0 0 220 220" fill="none">
+              <path d="M40 190 C 55 150, 30 130, 55 100 C 80 70, 60 55, 90 30" stroke="#A6171C" stroke-width="2" stroke-dasharray="1 14" stroke-linecap="round" />
+              <circle cx="42" cy="185" r="5" fill="#A6171C" />
+              <circle cx="53" cy="118" r="5" fill="#F1C045" />
+              <circle cx="72" cy="82" r="5" fill="#A6171C" />
+              <path d="M92 26 l4 10 10 2 -8 7 2 10 -8 -5 -8 5 2 -10 -8 -7 10 -2z" fill="#F1C045" />
+            </svg>
+          </div>
+          <div class="float-shape sunny"></div>
+          <div class="float-shape ruby-ring"></div>
+          <div class="orbit-wrap">
+            <div class="orbit-ball"></div>
+          </div>
+          <span class="visual-caption">✦ cada fase, um novo passo</span>
+        </div>
+
+        <div class="hero-copy">
+          <span class="badge-pill">Pediatria contemporânea</span>
+          <h1 class="hero-title">
+            <span class="line"><span>Pequenos passos.</span></span>
+            <span class="line"><span><em>Grandes</em> descobertas.</span></span>
+          </h1>
+          <p class="lead">Um espaço pensado para acompanhar cada fase da infância com cuidado, conhecimento e um pouquinho de diversão.</p>
+          <div class="ctas">
+            <a href="#page-03" class="btn btn-ghost">Conheça nossa clínica</a>
+            <a href="#page-10" class="btn btn-primary">Agendar consulta <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 02 · FRASE DE IMPACTO -->
+    <section class="page impact-page" id="page-02" data-page="02" data-label="Nossa frase">
+      <div class="page-inner center">
+        <div class="impact-ring" aria-hidden="true"></div>
+        <h2>Cuidar também é <em>deixar descobrir.</em></h2>
+        <p>Na infância, cada consulta é uma oportunidade de entender, acolher e acompanhar.</p>
+      </div>
+    </section>
+
+    <!-- 03 · ABORDAGEM -->
+    <section class="page" id="page-03" data-page="03" data-label="Abordagem">
+      <div class="page-inner">
+        <span class="eyebrow">Nossa abordagem</span>
+        <h2 class="page-title">Um cuidado que entende a infância.</h2>
+        <div class="pillars">
+          <div class="pillar">
+            <svg class="icon" viewBox="0 0 24 24" fill="none">
+              <path d="M12 21s-7.5-4.6-10-9C.2 8.3 2 4 6 4c2.1 0 3.6 1.2 6 4 2.4-2.8 3.9-4 6-4 4 0 5.8 4.3 4 8-2.5 4.4-10 9-10 9z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+            </svg>
+            <span class="num">ACOLHER</span>
+            <h3>Um começo sem pressa</h3>
+            <p>Criamos um ambiente onde crianças e famílias se sentem seguras desde o primeiro instante.</p>
+          </div>
+          <div class="pillar">
+            <svg class="icon" viewBox="0 0 24 24" fill="none">
+              <path d="M4 12a8 8 0 1 1 8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              <path d="M4 12v5a3 3 0 0 0 3 3h1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+            <span class="num">ESCUTAR</span>
+            <h3>Cada criança, seu ritmo</h3>
+            <p>Cada criança tem seu próprio ritmo, personalidade e história — e ouvimos antes de indicar.</p>
+          </div>
+          <div class="pillar">
+            <svg class="icon" viewBox="0 0 24 24" fill="none">
+              <path d="M3 17c2-4 4-4 6 0s4 4 6 0 4-4 6 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="num">ACOMPANHAR</span>
+            <h3>Além da consulta</h3>
+            <p>O cuidado continua além da consulta, em cada fase de crescimento e descoberta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · ESPECIALIDADES -->
+    <section class="page" id="page-04" data-page="04" data-label="Especialidades">
+      <div class="page-inner">
+        <span class="eyebrow">Especialidades</span>
+        <h2 class="page-title">Tudo o que seu pequeno precisa.</h2>
+        <div class="spec-grid">
+          <div class="spec-card"><span class="spec-num">01</span>
+            <h3>Pediatria</h3>
+            <p>Acompanhamento completo do desenvolvimento, da primeira consulta à adolescência.</p>
+          </div>
+          <div class="spec-card"><span class="spec-num">02</span>
+            <h3>Nutrição infantil</h3>
+            <p>Alimentação saudável construída de forma leve e possível para toda a família.</p>
+          </div>
+          <div class="spec-card"><span class="spec-num">03</span>
+            <h3>Psicologia infantil</h3>
+            <p>Um espaço seguro para entender emoções, comportamentos e vínculos.</p>
+          </div>
+          <div class="spec-card"><span class="spec-num">04</span>
+            <h3>Vacinação</h3>
+            <p>Proteção em cada etapa do crescimento, com calendário e orientação claros.</p>
+          </div>
+          <div class="spec-card"><span class="spec-num">05</span>
+            <h3>Desenvolvimento</h3>
+            <p>Acompanhamento dos principais marcos motores, sociais e cognitivos da infância.</p>
+          </div>
+          <div class="spec-card"><span class="spec-num">06</span>
+            <h3>Exames</h3>
+            <p>Avaliações complementares para cuidar com mais precisão e tranquilidade.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 · CRESCER -->
+    <section class="page dark-page" id="page-05" data-page="05" data-label="Crescer">
+      <div class="page-inner">
+        <span class="eyebrow">A jornada</span>
+        <h2 class="page-title">Cada idade tem uma história.</h2>
+        <p class="page-sub">Assim como as marcas na parede que registram cada centímetro, acompanhamos o crescimento em cada fase — no seu tempo.</p>
+
+        <div class="growth-wrap">
+          <div class="ruler" id="ruler" role="tablist" aria-label="Fases da infância"></div>
+          <div class="phase-panel">
+            <div class="growth-dial" aria-hidden="true">
+              <svg class="dial-svg" viewBox="0 0 200 200">
+                <defs>
+                  <linearGradient id="dialGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#A6171C" />
+                    <stop offset="100%" stop-color="#F1C045" />
+                  </linearGradient>
+                </defs>
+                <circle class="dial-track" cx="100" cy="100" r="80" />
+                <circle class="dial-fill" id="dialFill" cx="100" cy="100" r="80" stroke-dasharray="502.65" stroke-dashoffset="502.65" />
+                <g class="seed-icon" id="seedIcon">
+                  <path d="M100,124 C100,124 100,96 100,88" />
+                  <path d="M100,110 C88,110 80,100 80,88 C94,88 100,96 100,110 Z" fill="#F1C045" stroke="none" />
+                  <path d="M100,100 C112,100 120,90 120,78 C106,78 100,86 100,100 Z" fill="#F1C045" stroke="none" />
+                  <circle cx="100" cy="126" r="4" />
+                </g>
+                <g class="spark" data-stage="0" transform="translate(100,5)">
+                  <path d="M0,-6 1.6,-1.6 6,0 1.6,1.6 0,6 -1.6,1.6 -6,0 -1.6,-1.6Z" />
+                </g>
+                <g class="spark alt" data-stage="1" transform="translate(190,71)">
+                  <path d="M0,-6 1.6,-1.6 6,0 1.6,1.6 0,6 -1.6,1.6 -6,0 -1.6,-1.6Z" />
+                </g>
+                <g class="spark" data-stage="2" transform="translate(156,177)">
+                  <path d="M0,-6 1.6,-1.6 6,0 1.6,1.6 0,6 -1.6,1.6 -6,0 -1.6,-1.6Z" />
+                </g>
+                <g class="spark alt" data-stage="3" transform="translate(44,177)">
+                  <path d="M0,-6 1.6,-1.6 6,0 1.6,1.6 0,6 -1.6,1.6 -6,0 -1.6,-1.6Z" />
+                </g>
+                <g class="spark" data-stage="4" transform="translate(10,71)">
+                  <path d="M0,-6 1.6,-1.6 6,0 1.6,1.6 0,6 -1.6,1.6 -6,0 -1.6,-1.6Z" />
+                </g>
+                <g class="spark alt" data-stage="4" transform="translate(60,24) scale(0.75)">
+                  <path d="M0,-6 1.6,-1.6 6,0 1.6,1.6 0,6 -1.6,1.6 -6,0 -1.6,-1.6Z" />
+                </g>
+              </svg>
+            </div>
+            <div class="phase-copy">
+              <span class="eyebrow" id="phaseAge"></span>
+              <h3 class="phase-title" id="phaseTitle"></h3>
+              <p class="phase-text" id="phaseText"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 · EQUIPE -->
+    <section class="page" id="page-06" data-page="06" data-label="Equipe">
+      <div class="page-inner">
+        <span class="eyebrow">Equipe</span>
+        <h2 class="page-title">Quem está ao seu lado nessa jornada.</h2>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="avatar a1"><img src="images/equipe-helena.jpg" alt="Retrato da Dra. Helena Costa, pediatra da Broto"><span>Dra. Helena Costa</span></div>
+            <h3>Dra. Helena Costa</h3><span class="role">Pediatra</span>
+            <p>Especialista em desenvolvimento infantil.</p>
+          </div>
+          <div class="team-card">
+            <div class="avatar a2"><img src="images/equipe-lucas.jpg" alt="Retrato do Dr. Lucas Martins, pediatra da Broto"><span>Dr. Lucas Martins</span></div>
+            <h3>Dr. Lucas Martins</h3><span class="role">Pediatra</span>
+            <p>Acompanhamento integral da infância.</p>
+          </div>
+          <div class="team-card">
+            <div class="avatar a3"><img src="images/equipe-marina.jpg" alt="Retrato da Dra. Marina Alves, nutricionista da Broto"><span>Dra. Marina Alves</span></div>
+            <h3>Dra. Marina Alves</h3><span class="role">Nutricionista</span>
+            <p>Nutrição infantil e comportamento alimentar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 · AMBIENTE -->
+    <section class="page" id="page-07" data-page="07" data-label="Ambiente">
+      <div class="page-inner">
+        <span class="eyebrow">O espaço</span>
+        <h2 class="page-title">Um lugar feito para eles.</h2>
+        <div class="env-grid">
+          <div class="env-tile e1"><img src="images/ambiente-cantinho.jpg" alt="Cantinho de leitura e atividades da Broto, com mesinha infantil, cadeiras e prateleira de livros"><span>"Pensado para pequenas pessoas."</span></div>
+          <div class="env-tile e2"><img src="images/ambiente-recepcao.jpg" alt="Recepção acolhedora e colorida da clínica Broto"><span>"Esperar também pode ser divertido."</span></div>
+          <div class="env-tile e3"><img src="images/ambiente-brinquedoteca.jpg" alt="Brinquedoteca da Broto com tapete lúdico, poltronas e estante de brinquedos"><span>Brinquedoteca</span></div>
+          <div class="env-tile e4"><img src="images/ambiente-atendimento.jpg" alt="Sala de atendimento da Broto, ambiente colorido e planejado para consultas"><span>Sala de atendimento</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 · DEPOIMENTOS -->
+    <section class="page" id="page-08" data-page="08" data-label="Depoimentos">
+      <div class="page-inner">
+        <span class="eyebrow">Depoimentos</span>
+        <h2 class="page-title">Histórias de quem viveu essa experiência.</h2>
+        <div class="testi-wrap">
+          <div class="testi-track" id="testiTrack">
+            <div class="testi-card">
+              <p class="quote">"Desde a primeira consulta, meu filho se sentiu completamente à vontade."</p><span class="testi-name">Mariana, mãe do Theo</span>
+            </div>
+            <div class="testi-card">
+              <p class="quote">"É a primeira clínica em que meu filho pede para voltar."</p><span class="testi-name">Renata, mãe do Bento</span>
+            </div>
+            <div class="testi-card">
+              <p class="quote">"Sentimos que somos ouvidos, não só atendidos."</p><span class="testi-name">Paulo, pai da Alice</span>
+            </div>
+          </div>
+          <div class="testi-dots" id="testiDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 · GUIA PARA PAIS -->
+    <section class="page" id="page-09" data-page="09" data-label="Guia">
+      <div class="page-inner">
+        <span class="eyebrow">Para famílias</span>
+        <h2 class="page-title">Um guia para cuidar além da consulta.</h2>
+        <div class="guide-grid">
+          <a class="guide-card" href="#"><span class="eyebrow">Febre</span>
+            <h3>O que observar?</h3>
+            <p>Sinais que pedem atenção e quando procurar a clínica.</p><span class="arrow">Ler mais →</span>
+          </a>
+          <a class="guide-card" href="#"><span class="eyebrow">Alimentação</span>
+            <h3>Hábitos saudáveis</h3>
+            <p>Como construir uma relação leve com a comida desde cedo.</p><span class="arrow">Ler mais →</span>
+          </a>
+          <a class="guide-card" href="#"><span class="eyebrow">Sono</span>
+            <h3>A rotina da criança</h3>
+            <p>Entendendo o sono em cada fase do crescimento.</p><span class="arrow">Ler mais →</span>
+          </a>
+          <a class="guide-card" href="#"><span class="eyebrow">Desenvolvimento</span>
+            <h3>O que esperar?</h3>
+            <p>Marcos de cada fase, sem comparação e sem pressa.</p><span class="arrow">Ler mais →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 · CTA FINAL + FORMULÁRIO -->
+    <section class="page final-page" id="page-10" data-page="10" data-label="Vamos começar">
+      <div class="page-inner center cta-block">
+        <div class="cta-dot d1"></div>
+        <div class="cta-dot d2"></div>
+        <div class="cta-dot d3"></div>
+        <span class="eyebrow">Prontos para o próximo passo?</span>
+        <h2 class="page-title">Estamos aqui para acompanhar cada descoberta.</h2>
+      </div>
+
+      <div class="page-inner">
+        <div class="form-card">
+          <div id="formDefault">
+            <h3>Vamos começar?</h3>
+            <p>Preencha seus dados e nossa equipe entra em contato para agendar.</p>
+            <form id="clinicForm">
+              <div class="field"><label for="fname">Seu nome</label><input id="fname" type="text" required placeholder="Como podemos te chamar?"></div>
+              <div class="field"><label for="femail">Seu e-mail</label><input id="femail" type="email" required placeholder="voce@email.com"></div>
+              <div class="field-row">
+                <div class="field"><label for="fcity">Cidade</label><input id="fcity" type="text" required placeholder="Sua cidade"></div>
+                <div class="field"><label for="fstate">Estado</label><input id="fstate" type="text" required placeholder="UF" maxlength="2"></div>
+              </div>
+              <button type="submit" class="btn btn-primary full">Enviar <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg></button>
+            </form>
+          </div>
+          <div class="form-success" id="formSuccess">
+            <div class="check"><svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></div>
+            <h3>Recebemos seu pedido!</h3>
+            <p>Em breve nossa equipe entra em contato para agendar sua consulta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="page-inner">
+        <div class="foot-top">
+          <div><a href="#page-01" class="rail-logo dark"><span class="dot"></span>Broto</a>
+            <p>Pediatria contemporânea, feita para acompanhar cada pequena descoberta da infância.</p>
+          </div>
+          <div>
+            <h4>Navegação</h4>
+            <ul>
+              <li><a href="#page-03">Abordagem</a></li>
+              <li><a href="#page-04">Especialidades</a></li>
+              <li><a href="#page-06">Equipe</a></li>
+              <li><a href="#page-09">Para famílias</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contato</h4>
+            <ul>
+              <li><a href="tel:+5561999999999">(61) 99999-9999</a></li>
+              <li><a href="mailto:ola@broto.clinica">ola@broto.clinica</a></li>
+              <li>Rua das Acácias, 120 — Brasília, DF</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Redes</h4>
+            <ul>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot-bottom"><span>© 2026 Broto Pediatria. Todos os direitos reservados.</span><span>Feito com cuidado, para famílias.</span></div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
